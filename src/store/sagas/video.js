@@ -25,10 +25,6 @@ export function* fetchMostPopularVideos(amount, loadDescription, nextPageToken) 
   yield fetchEntity(request, videoActions.mostPopular);
 }
 
-
-/******************************************************************************/
-/******************************* WATCHERS *************************************/
-/******************************************************************************/
 export function* watchMostPopularVideos() {
   while (true) {
     const {amount, loadDescription, nextPageToken} = yield take(videoActions.MOST_POPULAR[REQUEST]);
@@ -39,6 +35,7 @@ export function* watchMostPopularVideos() {
 export function* watchVideoCategories() {
   yield takeEvery(videoActions.VIDEO_CATEGORIES[REQUEST], fetchVideoCategories);
 }
+
 export function* watchMostPopularVideosByCategory() {
   while(true) {
     const {categories} = yield take(videoActions.MOST_POPULAR_BY_CATEGORY[REQUEST]);

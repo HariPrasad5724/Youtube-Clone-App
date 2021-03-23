@@ -8,10 +8,6 @@ export function* searchForVideos(searchQuery, nextPageToken, amount) {
   const request = api.buildSearchRequest.bind(null, searchQuery, nextPageToken, amount);
   yield fetchEntity(request, searchActions.forVideos, searchQuery);
 }
-
-/******************************************************************************/
-/******************************* WATCHERS *************************************/
-/******************************************************************************/
 export function* watchSearchForVideos() {
   while (true) {
     const {searchQuery, amount, nextPageToken} = yield take(searchActions.SEARCH_FOR_VIDEOS[REQUEST]);

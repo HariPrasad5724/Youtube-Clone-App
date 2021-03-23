@@ -1,7 +1,8 @@
 import React from 'react';
 import {Form, Icon, Image, Input, Menu} from 'semantic-ui-react';
 import './HeaderNav.scss';
-import logo from '../../assets/images/logo.jpg';
+//import logo1 from '../../assets/images/logo.jpg';
+import logo2 from '../../assets/images/logo2.png';
 import {Link, withRouter} from 'react-router-dom';
 
 export class HeaderNav extends React.Component {
@@ -13,17 +14,13 @@ export class HeaderNav extends React.Component {
   }
   render() {
     return (
-      // 1
       <Menu borderless className='top-menu' fixed='top'>
-        {/* 2 */}
         <Menu.Item header className='logo'>
-          <Link to='/'><Image src={logo} size='tiny'/></Link>
+          <Link to='/'><Image src={logo2} size='tiny'/></Link>
         </Menu.Item>
-        {/* 3 */}
         <Menu.Menu className='nav-container'>
           <Menu.Item className='search-input'>
             <Form onSubmit={this.onSubmit}>
-              {/* 4 */}
               <Form.Field>
                 <Input placeholder='Search'
                        size='small'
@@ -34,10 +31,8 @@ export class HeaderNav extends React.Component {
               </Form.Field>
             </Form>
           </Menu.Item>
-          {/* 5 */}
           <Menu.Menu position='right'>
             <Menu.Item>
-              {/* 6 */}
               <Icon className='header-icon' name='video camera' size='large'/>
             </Menu.Item>
             <Menu.Item>
@@ -49,7 +44,6 @@ export class HeaderNav extends React.Component {
             <Menu.Item>
               <Icon className='header-icon' name='alarm' size='large'/>
             </Menu.Item>
-            {/* 7*/}
             <Menu.Item name='avatar'>
               <Image src='https://via.placeholder.com/80x80' avatar/>
             </Menu.Item>

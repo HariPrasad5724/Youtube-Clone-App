@@ -1,9 +1,12 @@
+export function apikey(){
+  return 'AIzaSyBUN0zGhpEdm6t8wLRIioWmAmeaPgJCmfY';
+}
 export function buildVideoCategoriesRequest() {
   return buildApiRequest('GET',
     '/youtube/v3/videoCategories',
     {
       'part': 'snippet',
-      'regionCode': 'US'
+      'regionCode': 'IN'
     }, null);
 }
 
@@ -18,7 +21,7 @@ export function buildMostPopularVideosRequest(amount = 12, loadDescription = fal
       part: 'snippet,statistics,contentDetails',
       chart: 'mostPopular',
       maxResults: amount,
-      regionCode: 'US',
+      regionCode: 'IN',
       pageToken: nextPageToken,
       fields,
       videoCategoryId,
@@ -77,10 +80,6 @@ export function buildRelatedVideosRequest(videoId, amountRelatedVideos = 12) {
       relatedToVideoId: videoId,
     }, null);
 }
-
-/*
-  Util - Youtube API boilerplate code
- */
 export function buildApiRequest(requestMethod, path, params, properties) {
   params = removeEmptyParams(params);
   let request;
@@ -125,7 +124,6 @@ function createResource(properties) {
     }
   }
   for (var prop in normalizedProps) {
-    // Leave properties that don't have values out of inserted resource.
     if (normalizedProps.hasOwnProperty(prop) && normalizedProps[prop]) {
       var propArray = prop.split('.');
       var ref = resource;

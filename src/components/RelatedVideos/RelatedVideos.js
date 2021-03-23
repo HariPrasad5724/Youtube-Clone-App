@@ -8,7 +8,6 @@ export function RelatedVideos(props) {
     return <div className='related-videos'/>;
   }
 
-  // safe because before we check if the array has at least one element
   const nextUpVideo = props.videos[0];
   const remainingVideos = props.videos.slice(1);
 
