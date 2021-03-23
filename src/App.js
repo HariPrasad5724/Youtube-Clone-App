@@ -10,7 +10,6 @@ import Trending from './containers/Trending/Trending';
 import Search from './containers/Search/Search';
 import {apikey} from './store/api/youtube-api';
 const API_KEY = apikey();
-
 class App extends Component {
   render() {
     return (

@@ -14,9 +14,11 @@ export class SideBar extends React.Component {
         <SideBarItem path='/feed/trending' label='Trending' icon='fire'/>
         <SideBarItem label='Followers' icon='spy'/>
         <Divider/>
-        <SideBarHeader title='Library'/>
+        <SideBarItem label='Library' icon='window restore'/>
         <SideBarItem label='History' icon='history'/>
         <SideBarItem label='Watch later' icon='clock'/>
+        <SideBarItem label='Downloaded Videos' icon='download'/>
+        <SideBarItem label='Your Videos' icon='caret square right outline'/>
         <SideBarItem label='Liked videos' icon='thumbs up'/>
         <Divider/>
         <Subscriptions/>
