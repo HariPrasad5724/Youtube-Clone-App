@@ -5,7 +5,7 @@ import './SideBar.scss';
 import {SideBarHeader} from './SideBarHeader/SideBarHeader';
 import {Subscriptions} from './Subscriptions/Subscriptions';
 import {SideBarFooter} from './SideBarFooter/SideBarFooter';
-
+import '../dark.css';
 export class SideBar extends React.Component {
   render() {
     return (

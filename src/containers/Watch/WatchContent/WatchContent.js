@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 import {getChannel} from '../../../store/reducers/channels';
 import {getCommentsForVideo} from '../../../store/reducers/comments';
 import {InfiniteScroll} from '../../../components/InfiniteScroll/InfiniteScroll';
-
+import '../../dark.css';
 class WatchContent extends React.Component {
   render() {
     if (!this.props.videoId) {
