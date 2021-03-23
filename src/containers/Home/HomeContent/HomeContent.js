@@ -4,7 +4,7 @@ import './HomeContent.scss';
 import {getMostPopularVideos, getVideosByCategory} from '../../../store/reducers/videos';
 import {connect} from 'react-redux';
 import {InfiniteScroll} from '../../../components/InfiniteScroll/InfiniteScroll';
-
+import '../../dark.css';
 const AMOUNT_TRENDING_VIDEOS = 12;
 
 export class HomeContent extends React.Component {
@@ -32,7 +32,6 @@ export class HomeContent extends React.Component {
     const categoryTitles = Object.keys(this.props.videosByCategory || {});
     return categoryTitles.map((categoryTitle,index) => {
       const videos = this.props.videosByCategory[categoryTitle];
-      // the last video grid element should not have a divider
       const hideDivider = index === categoryTitles.length - 1;
       return <VideoGrid title={categoryTitle} videos={videos} key={categoryTitle} hideDivider={hideDivider}/>;
     });

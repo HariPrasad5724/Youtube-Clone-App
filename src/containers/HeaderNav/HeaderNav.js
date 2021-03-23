@@ -1,9 +1,10 @@
 import React from 'react';
 import {Form, Icon, Image, Input, Menu} from 'semantic-ui-react';
 import './HeaderNav.scss';
-//import logo1 from '../../assets/images/logo.jpg';
+import logo1 from '../../assets/images/logo.jpg';
 //import logo2 from '../../assets/images/logo2.png';
-import logo3 from '../../assets/images/logo3.jpg';
+//import logo3 from '../../assets/images/logo3.jpg';
+//import logo4 from '../../assets/images/logo4.png';
 import {Link, withRouter} from 'react-router-dom';
 
 export class HeaderNav extends React.Component {
@@ -17,7 +18,7 @@ export class HeaderNav extends React.Component {
     return (
       <Menu borderless className='top-menu' fixed='top'>
         <Menu.Item header className='logo'>
-          <Link to='/'><Image src={logo3} size='small'/></Link>
+          <Link to='/'><Image src={logo1} size='tiny'/></Link>
         </Menu.Item>
         <Menu.Menu className='nav-container'>
           <Menu.Item className='search-input'>
@@ -46,7 +47,7 @@ export class HeaderNav extends React.Component {
               <Icon className='header-icon' name='alarm' size='large'/>
             </Menu.Item>
             <Menu.Item name='avatar'>
-              <Image src='https://via.placeholder.com/80x80' avatar/>
+              <Icon className='header-icon' name='user secret' size='large' />
             </Menu.Item>
           </Menu.Menu>
         </Menu.Menu>
