@@ -69,7 +69,6 @@ function reduceFetchMostPopularVideosByCategory(responses, categories, prevState
   let byCategoryMap = {};
 
   responses.forEach((response, index) => {
-    // ignore answer if there was an error
     if (response.status === 400) return;
 
     const categoryId = categories[index];
@@ -78,7 +77,6 @@ function reduceFetchMostPopularVideosByCategory(responses, categories, prevState
     byCategoryMap[categoryId] = byCategory;
   });
 
-  // compute new state
   return {
     ...prevState,
     byId: {...prevState.byId, ...videoMap},

@@ -34,8 +34,6 @@ function reduceCommentThread(response, videoId, prevState) {
     return acc;
   }, {});
 
-  // if we have already fetched some comments for a particular video
-  // we just append the ids for the new comments
   const prevCommentIds = prevState.byVideo[videoId] ? prevState.byVideo[videoId].ids : [];
   const commentIds = [...prevCommentIds, ...Object.keys(newComments)];
 
