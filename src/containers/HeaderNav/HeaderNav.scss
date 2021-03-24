@@ -4,7 +4,7 @@
   we use this rule to tweak the SCSS
 */
 .ui.menu.top-menu {
-  border: none;
+  border:none;
   .logo {
     width: $sidebar-left-width;
   }
@@ -13,7 +13,7 @@
     padding: 0;
 
     .search-input {
-      padding-left: 0;
+      padding-left: 5;
       width: 33%;
 
       form {

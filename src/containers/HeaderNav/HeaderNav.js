@@ -26,7 +26,7 @@ export class HeaderNav extends React.Component {
               <Form.Field>
                 <Input placeholder='Search'
                        size='small'
-                       action='Go'
+                       action='>'
                        value={this.state.query}
                        onChange={this.onInputChange}
                 />

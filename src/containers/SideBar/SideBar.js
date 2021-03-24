@@ -9,12 +9,13 @@ import '../dark.css';
 export class SideBar extends React.Component {
   render() {
     return (
+      <div>
       <Menu borderless vertical stackable fixed='left' className='side-nav'>
         <SideBarItem path='/' label='Home' icon='home'/>
         <SideBarItem path='/feed/trending' label='Trending' icon='fire'/>
         <SideBarItem label='Followers' icon='spy'/>
         <Divider/>
-        <SideBarItem label='Library' icon='window restore'/>
+        <SideBarHeader title='Library'/>
         <SideBarItem label='History' icon='history'/>
         <SideBarItem label='Watch later' icon='clock'/>
         <SideBarItem label='Downloaded Videos' icon='download'/>
@@ -31,6 +32,7 @@ export class SideBar extends React.Component {
         <Divider/>
         <SideBarFooter/>
       </Menu>
+      </div>
     );
   }
 }
