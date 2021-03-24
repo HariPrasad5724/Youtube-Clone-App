@@ -68,7 +68,7 @@ export class VideoInfoBox extends React.Component {
     const {channel} = this.props;
     const parsedSubscriberCount = Number(channel.statistics.subscriberCount);
     const subscriberCount = getShortNumberString(parsedSubscriberCount);
-    return `Subscribe ${subscriberCount}`;
+    return `Subscribers ${subscriberCount}`;
   }
 
   getConfig() {
