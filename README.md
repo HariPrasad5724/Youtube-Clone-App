@@ -25,12 +25,6 @@ These are the steps to run the projects. If any error arises please verify wheth
     
     
 Complete working video of the project is given in the link below
-
-
-
-Screenshots
-
-![Screenshot (610)](https://user-images.githubusercontent.com/55315604/112259512-715b8500-8c8e-11eb-8bd9-197226108a07.png)
-
+![Screenshot (610)](https://user-images.githubusercontent.com/55315604/112262828-496f2000-8c94-11eb-89ec-bb18a5989914.png)
 
 
